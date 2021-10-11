@@ -1,0 +1,102 @@
+<section class="heading-section">
+
+    <h1 class="title is-1 has-text-centered"> To Do List </h1>
+    <h5 class="title is-5 no-text-shadow"> Help you increase your productivity </h5>
+
+</section>
+
+<div class="container">
+
+    <div class="add-box-todo">
+
+        <form #form="ngForm" (ngSubmit)="onFormSubmit">
+
+            <h2 class="title-is-5" style="color: white"> Add New ToDo </h2>
+
+            <!-- <div class="field">
+                <div class="control">
+                    <input type="text" class="input">
+                </div>
+            </div> -->
+
+            <div class="field is-grouped">
+                <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Type ToDo here ...">
+                </p>
+                <p class="control">
+                    <button class="button alt-gradient-button">
+                        <i class="material-icons">add</i>
+
+                    </button>
+                </p>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<section class="section">
+
+    <div class="container">
+        <div class="todos-list">
+
+            <div class="item-todo completed" *ngFor="let todo of todos" [class.comoleted]="todo.completed">
+                <div class="checkbox">
+                    <i class="material-icons">
+                        check
+                    </i>
+                </div>
+
+                <!-- <div class="text-todo complete">
+                    This is a placeholder for the todo text!This is a placeholder for the todo text!This is a
+                    placeholder for the todo text!This is a placeholder for the todo text!
+                </div> -->
+
+                <div class="text-todo">
+                  {{ todo.text }}
+                </div>
+
+
+                
+                <div class="todo-controlbox">
+                    <div class="todo-controlbutton is-info">
+                        <i class="material-icons">edit</i>
+                    </div>
+                    <div class="todo-controlbutton is-danger">
+                        <i class="material-icons">delete</i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="item-todo">
+                <div class="checkbox">
+                    <i class="material-icons">
+                        check
+                    </i>
+                </div>
+
+                <div class="text-todo">
+                    This is a placeholder for the todo text!
+                </div>
+
+                <div class="todo-controlbox">
+                    <div class="todo-controlbutton is-info">
+                        <i class="material-icons">edit</i>
+                    </div>
+                    <div class="todo-controlbutton is-danger">
+                        <i class="material-icons">delete</i>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+
+        </div>
+    </div>
+
+</section>
